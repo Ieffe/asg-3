@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.title}}</title>
+</head>
+<body>
+    <table style="border: solid black 2px;">
+        <tr>
+            <th>Water</td>
+            <td>{{(index .data .latest_index).Water}} m</td>
+        </tr>
+        <tr>
+            <th>Wind</th>
+            <td>{{(index .data .latest_index).Wind}} m/s</td>
+        </tr>
+    </table>
+    <p>Status: {{.current_stats}} </p>
+
+</body>
+</html>
